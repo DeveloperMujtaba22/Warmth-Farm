@@ -15,6 +15,20 @@ const Hero = () => {
         />
       </div>
 
+      {/* Decorative cloud - top */}
+      <div className="absolute -top-6 left-1/4 w-[480px] h-[200px] pointer-events-none select-none z-0">
+        <div className="absolute top-4 left-16 w-56 h-24 bg-white/60 rounded-full blur-2xl" />
+        <div className="absolute top-0 left-40 w-64 h-28 bg-white/50 rounded-full blur-2xl" />
+        <div className="absolute top-8 left-0 w-44 h-20 bg-white/40 rounded-full blur-2xl" />
+      </div>
+
+      {/* Decorative cloud - bottom left */}
+      <div className="absolute -bottom-10 -left-10 w-[420px] h-[220px] pointer-events-none select-none z-0">
+        <div className="absolute bottom-0 left-10 w-52 h-24 bg-white/70 rounded-full blur-2xl" />
+        <div className="absolute bottom-4 left-0 w-40 h-20 bg-white/60 rounded-full blur-2xl" />
+        <div className="absolute bottom-0 left-32 w-56 h-28 bg-white/50 rounded-full blur-2xl" />
+      </div>
+
       {/* Left content */}
       <div className="relative z-10 max-w-7xl mx-auto px-6 md:px-16 pt-16 pb-24 min-h-screen flex flex-col justify-center">
         <div className="w-full md:w-[48%] flex flex-col gap-6">
@@ -67,8 +81,9 @@ const Hero = () => {
           </div>
 
           {/* CTA button */}
-          <button className="bg-amber-400 hover:bg-amber-300 transition-colors text-slate-900 font-semibold px-6 py-4 rounded-xl shadow-md w-fit flex items-center gap-3">
-            Get an Inspection
+          <button className="bg-amber-400 hover:bg-amber-300 text-xl transition-colors text-slate-900 font-semibold px-16 py-4 rounded-xl shadow-md w-fit flex items-center gap-3">
+            <img src="/farm.png" alt="" width={40} height={40} /> Get an
+            Inspection
           </button>
         </div>
       </div>
