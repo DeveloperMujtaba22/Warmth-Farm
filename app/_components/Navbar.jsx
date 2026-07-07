@@ -5,19 +5,25 @@ const Navbar = () => {
   return (
     <nav className="w-full flex items-stretch h-20 md:h-24 shadow-sm">
       {/* Left half - white background, logo */}
-      <div className="flex-1 bg-white flex items-center px-6 md:px-20">
-        <div className="flex flex-col leading-tight">
-          <span className="text-lg md:text-xl font-extrabold tracking-wide text-slate-900">
-            WARMTH <br /> TERRITORY
-          </span>
-          <span className="text-[11px] md:text-xs text-slate-500 tracking-wide">
-            Everything about insulation. <br /> with polyurethane foam
-          </span>
+      <div className="flex-1 bg-white flex items-center gap-4 px-6 md:px-16">
+        {/* Logo badge */}
+        <div className="text-black text-center leading-tight shrink-0">
+          <div className="text-xl md:text-xl font-extrabold tracking-wide">
+            WARMTH
+          </div>
+          <div className="bg-slate-800 text-white p-2 text-base md:text-base font-extrabold tracking-wide">
+            TERRITORY
+          </div>
         </div>
+
+        {/* Tagline */}
+        <span className="text-[14px] md:text-base text-slate-500 tracking-wide leading-snug">
+          Everything about insulation. <br /> with polyurethane foam
+        </span>
       </div>
 
       {/* Right half - blue background, contact + CTA */}
-      <div className="flex-1 bg-sky-400 flex items-center justify-between px-6 md:px-90 gap-4">
+      <div className="flex-1 bg-sky-400 flex items-center justify-end gap-6 pl-6 pr-10 md:pr-120">
         <div className="hidden sm:flex items-center gap-3">
           <div className="w-9 h-9 rounded-full bg-white/20 flex items-center justify-center shrink-0">
             <Phone className="w-4 h-4 text-white" fill="white" />
