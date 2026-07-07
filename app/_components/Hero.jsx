@@ -3,10 +3,21 @@ import Image from "next/image";
 
 const Hero = () => {
   return (
-    <section className="relative w-full overflow-hidden bg-gradient-to-b from-sky-200 via-sky-300 to-sky-400 min-h-[600px] md:min-h-[680px]">
-      <div className="relative z-10 max-w-7xl mx-auto px-6 md:px-16 pt-16 pb-24 flex flex-col md:flex-row items-center">
-        {/* Left content */}
-        <div className="w-full md:w-1/2 flex flex-col gap-6">
+    <section className="relative w-full min-h-screen overflow-hidden bg-gradient-to-b from-sky-200 via-sky-300 to-sky-400">
+      {/* Background image - full screen width & height */}
+      <div className="absolute inset-0 w-full h-full">
+        <Image
+          src="/hero-worker.png"
+          alt="Technician spraying polyurethane foam insulation"
+          fill
+          className="object-cover object-right"
+          priority
+        />
+      </div>
+
+      {/* Left content */}
+      <div className="relative z-10 max-w-7xl mx-auto px-6 md:px-16 pt-16 pb-24 min-h-screen flex flex-col justify-center">
+        <div className="w-full md:w-[48%] flex flex-col gap-6">
           <h1 className="text-3xl md:text-5xl font-extrabold leading-tight text-slate-900">
             WE INSULATE WITH SPRAYED PPU{" "}
             <span className="inline-block bg-slate-900 text-white px-3 py-1 rounded-md text-lg md:text-2xl align-middle">
@@ -14,9 +25,9 @@ const Hero = () => {
             </span>
           </h1>
 
-          {/* Badges */}
+          {/* Badges - glassmorphism / blurred cards */}
           <div className="flex flex-wrap gap-4">
-            <div className="bg-white rounded-lg shadow-md px-4 py-3 flex items-center gap-3 max-w-[220px]">
+            <div className="bg-white/60 backdrop-blur-md rounded-lg shadow-md px-4 py-3 flex items-center gap-3 max-w-[220px] border border-white/40">
               <Image
                 src="/badge-prepay.png"
                 alt="No prepayment required"
@@ -24,12 +35,12 @@ const Hero = () => {
                 height={40}
                 className="shrink-0"
               />
-              <span className="text-sm text-slate-700 font-medium">
+              <span className="text-sm text-slate-800 font-medium">
                 Pay only after the work is done
               </span>
             </div>
 
-            <div className="bg-white rounded-lg shadow-md px-4 py-3 flex items-center gap-3 max-w-[240px]">
+            <div className="bg-white/60 backdrop-blur-md rounded-lg shadow-md px-4 py-3 flex items-center gap-3 max-w-[240px] border border-white/40">
               <Image
                 src="/badge-notice.png"
                 alt="Reduce heating bills"
@@ -37,19 +48,19 @@ const Hero = () => {
                 height={40}
                 className="shrink-0"
               />
-              <span className="text-sm text-slate-700 font-medium">
+              <span className="text-sm text-slate-800 font-medium">
                 Cut your heating bills by 40% or get your money back
               </span>
             </div>
           </div>
 
           {/* Description */}
-          <div>
+          <div className="bg-white/40 backdrop-blur-sm rounded-lg px-4 py-3 w-fit">
             <p className="text-lg font-semibold text-slate-900">
               Get a <span className="text-sky-700">free</span> thermal
               inspection.
             </p>
-            <p className="text-sm text-slate-600 mt-2 max-w-md">
+            <p className="text-sm text-slate-700 mt-2 max-w-md">
               After the inspection, you'll know exactly how to achieve
               maximum heat-loss reduction for the lowest budget.
             </p>
@@ -59,18 +70,6 @@ const Hero = () => {
           <button className="bg-amber-400 hover:bg-amber-300 transition-colors text-slate-900 font-semibold px-6 py-4 rounded-xl shadow-md w-fit flex items-center gap-3">
             Get an Inspection
           </button>
-        </div>
-
-        {/* Right image */}
-        <div className="w-full md:w-1/2 relative flex justify-center mt-10 md:mt-0">
-          <Image
-            src="/hero-worker.png"
-            alt="Technician spraying polyurethane foam insulation"
-            width={900}
-            height={900}
-            className="w-full max-w-md md:max-w-lg h-auto object-contain"
-            priority
-          />
         </div>
       </div>
 
