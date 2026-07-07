@@ -1,22 +1,23 @@
 import React from "react";
 import Image from "next/image";
+import { MousePointerClick } from "lucide-react";
 
 const Hero = () => {
   return (
-    <section className="relative w-full min-h-screen overflow-hidden bg-gradient-to-b from-sky-200 via-sky-300 to-sky-400">
+    <section className="relative w-full min-h-screen overflow-hidden bg-gradient-to-b from-sky-200 via-[#7ec6fa] to-[#7dc6fb]">
       {/* Background image - full screen width & height */}
       <div className="absolute inset-0 w-full h-full">
         <Image
           src="/hero-worker.png"
           alt="Technician spraying polyurethane foam insulation"
           fill
-          className="object-cover object-right"
+          className="object-contain object-right"
           priority
         />
       </div>
 
       {/* Decorative cloud - top */}
-      <div className="absolute -top-6 left-1/4 w-[480px] h-[200px] pointer-events-none select-none z-0">
+      <div className="absolute -top-16 left-1/4 w-[480px] h-[200px] pointer-events-none select-none z-0">
         <div className="absolute top-4 left-16 w-56 h-24 bg-white/60 rounded-full blur-2xl" />
         <div className="absolute top-0 left-40 w-64 h-28 bg-white/50 rounded-full blur-2xl" />
         <div className="absolute top-8 left-0 w-44 h-20 bg-white/40 rounded-full blur-2xl" />
@@ -30,9 +31,9 @@ const Hero = () => {
       </div>
 
       {/* Left content */}
-      <div className="relative z-10 max-w-7xl mx-auto px-6 md:px-16 pt-16 pb-24 min-h-screen flex flex-col justify-center">
+      <div className="relative z-10 max-w-7xl mx-auto px-6 md:px-2 pt-16 pb-24 min-h-screen flex flex-col justify-center">
         <div className="w-full md:w-[48%] flex flex-col gap-6">
-          <h1 className="text-3xl md:text-5xl font-extrabold leading-tight text-slate-900">
+        <h1 className="text-3xl md:text-5xl font-bold font-sans leading-tight text-slate-900">
             WE INSULATE WITH SPRAYED PPU{" "}
             <span className="inline-block bg-slate-900 text-white px-3 py-1 rounded-md text-lg md:text-2xl align-middle">
               30-YEAR GUARANTEE
@@ -41,12 +42,12 @@ const Hero = () => {
 
           {/* Badges - glassmorphism / blurred cards */}
           <div className="flex flex-wrap gap-4">
-            <div className="bg-white/60 backdrop-blur-md rounded-lg shadow-md px-4 py-3 flex items-center gap-3 max-w-[220px] border border-white/40">
+            <div className="bg-white/80 backdrop-blur-xl rounded-lg shadow-md px-4 py-3 flex items-center gap-3 max-w-[220px] border border-white/50">
               <Image
                 src="/badge-prepay.png"
                 alt="No prepayment required"
-                width={40}
-                height={40}
+                width={60}
+                height={60}
                 className="shrink-0"
               />
               <span className="text-sm text-slate-800 font-medium">
@@ -54,7 +55,7 @@ const Hero = () => {
               </span>
             </div>
 
-            <div className="bg-white/60 backdrop-blur-md rounded-lg shadow-md px-4 py-3 flex items-center gap-3 max-w-[240px] border border-white/40">
+            <div className="bg-white/80 backdrop-blur-xl rounded-lg shadow-md px-4 py-3 flex items-center gap-3 max-w-[240px] border border-white/50">
               <Image
                 src="/badge-notice.png"
                 alt="Reduce heating bills"
@@ -81,20 +82,22 @@ const Hero = () => {
           </div>
 
           {/* CTA button */}
-          <button className="bg-amber-400 hover:bg-amber-300 text-xl transition-colors text-slate-900 font-semibold px-16 py-4 rounded-xl shadow-md w-fit flex items-center gap-3">
-            <img src="/farm.png" alt="" width={40} height={40} /> Get an
-            Inspection
-          </button>
+          <div className="relative w-fit flex items-center">
+            <img
+              src="/technician.png"
+              alt=""
+              className="w-16 h-16 md:w-20 md:h-20 rounded-full object-cover border-4 border-white shadow-md z-10 -mr-6"
+            />
+            <button className="bg-gradient-to-b from-amber-300 to-amber-400 hover:from-amber-200 hover:to-amber-300 transition-colors text-slate-900 font-semibold text-base md:text-lg pl-10 pr-8 py-4 rounded-full shadow-md flex items-center">
+              Get an Inspection
+            </button>
+            <MousePointerClick className="w-7 h-7 text-slate-900 -ml-4 z-10" />
+          </div>
         </div>
       </div>
 
-      {/* Scroll indicator */}
-      <div className="absolute bottom-8 left-1/2 -translate-x-1/2 flex flex-col items-center gap-2 text-slate-700/70 z-10">
-        <span className="text-xs tracking-wide">scroll</span>
-        <div className="w-5 h-8 rounded-full border-2 border-slate-700/40 flex justify-center pt-1">
-          <div className="w-1 h-2 bg-slate-700/60 rounded-full animate-bounce" />
-        </div>
-      </div>
+      
+    
     </section>
   );
 };

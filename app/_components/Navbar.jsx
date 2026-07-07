@@ -23,7 +23,7 @@ const Navbar = () => {
       </div>
 
       {/* Right half - blue background, contact + CTA */}
-      <div className="flex-1 bg-sky-400 flex items-center justify-end gap-6 pl-6 pr-10 md:pr-[350px]">
+      <div className="flex-1 bg-[#56b6fa] flex items-center justify-end gap-16 pl-80 pr-10 md:pr-[350px]">
         <div className="hidden sm:flex items-center gap-3 mr-4 md:mr-8">
           <div className="w-9 h-9 rounded-full bg-white/20 flex items-center justify-center shrink-0">
             <Phone className="w-4 h-4 text-white" fill="white" />
@@ -42,7 +42,7 @@ const Navbar = () => {
           </div>
         </div>
 
-       <button className="bg-amber-400 hover:bg-amber-300 transition-colors text-slate-900 font-semibold text-base md:text-xl px-4 md:px-6 py-2.5 rounded-full whitespace-nowrap shrink-0 mr-4 md:mr-[-198]">
+       <button className="bg-gradient-to-b from-amber-300 to-amber-400 hover:from-amber-200 hover:to-amber-300 transition-colors text-slate-900 font-semibold text-base md:text-xl px-4 md:px-6 py-2.5 rounded-full whitespace-nowrap shrink-0 mr-4 md:mr-[-198]">
   Call me back
 </button>
       </div>
