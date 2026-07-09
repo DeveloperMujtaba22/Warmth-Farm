@@ -4,6 +4,7 @@ import Features from './_components/Features'
 import SpaceInsulation from './_components/SpaceInsulation'
 import PricingCards from './_components/Pricingcards'
 import PropertyTypes from './_components/PropertyTypes'
+import ContactCTA from './_components/ContactCTA'
 
 const page = () => {
   return (
@@ -13,6 +14,7 @@ const page = () => {
       <SpaceInsulation/>
       <PricingCards/>
       <PropertyTypes/>
+      <ContactCTA/>
     </>
   )
 }
