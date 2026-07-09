@@ -7,6 +7,7 @@ import PropertyTypes from './_components/PropertyTypes'
 import ContactCTA from './_components/ContactCTA'
 import BeforeAfter from './_components/BeforeAfter'
 import RigidPPU from './_components/RigidPPU'
+import CalculatorCTA from './_components/CalculatorCTA'
 
 const page = () => {
   return (
@@ -19,6 +20,7 @@ const page = () => {
       <ContactCTA/>
       <BeforeAfter/>
       <RigidPPU/>
+      <CalculatorCTA/>
     </>
   )
 }
