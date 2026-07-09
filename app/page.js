@@ -6,6 +6,7 @@ import PricingCards from './_components/Pricingcards'
 import PropertyTypes from './_components/PropertyTypes'
 import ContactCTA from './_components/ContactCTA'
 import BeforeAfter from './_components/BeforeAfter'
+import RigidPPU from './_components/RigidPPU'
 
 const page = () => {
   return (
@@ -17,6 +18,7 @@ const page = () => {
       <PropertyTypes/>
       <ContactCTA/>
       <BeforeAfter/>
+      <RigidPPU/>
     </>
   )
 }
