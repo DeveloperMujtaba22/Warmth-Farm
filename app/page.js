@@ -8,6 +8,8 @@ import ContactCTA from './_components/ContactCTA'
 import BeforeAfter from './_components/BeforeAfter'
 import RigidPPU from './_components/RigidPPU'
 import CalculatorCTA from './_components/CalculatorCTA'
+import FAQ from './_components/FAQ'
+
 
 const page = () => {
   return (
@@ -21,6 +23,7 @@ const page = () => {
       <BeforeAfter/>
       <RigidPPU/>
       <CalculatorCTA/>
+      <FAQ/>
     </>
   )
 }
