@@ -9,6 +9,7 @@ import BeforeAfter from './_components/BeforeAfter'
 import RigidPPU from './_components/RigidPPU'
 import CalculatorCTA from './_components/CalculatorCTA'
 import FAQ from './_components/FAQ'
+import ThermalInspection from './_components/ThermalInspection'
 
 
 const page = () => {
@@ -24,6 +25,7 @@ const page = () => {
       <RigidPPU/>
       <CalculatorCTA/>
       <FAQ/>
+      <ThermalInspection/>
     </>
   )
 }
